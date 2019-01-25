@@ -1,7 +1,6 @@
 <template>
     <div class="hello">
         hello {{v}}
-        <my-input v-model="v" placeholder="New todo"></my-input>
     </div>
 </template>
 

@@ -1,16 +1,19 @@
 <template>
     <div id="app">
-        <b-alert variant="danger"
-                 dismissible
-                 :show="showDismissibleAlert"
-                 @dismissed="showDismissibleAlert=false">
-            Dismissible Alert!
-        </b-alert>
+        {{test}}asdf
     </div>
 </template>
 
 <script>
     export default {
+        data() {
+            return {
+                test: ''
+            }
+        },
+        created() {
+            this.test = this.params.test
+        },
         name: 'app'
     }
 </script>
