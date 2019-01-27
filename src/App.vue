@@ -8,11 +8,10 @@
     export default {
         data() {
             return {
-                test: ''
+                test: this.$params.test || "1"
             }
         },
         created() {
-            this.test = this.params.test
         },
         name: 'app'
     }
