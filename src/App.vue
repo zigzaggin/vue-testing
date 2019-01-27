@@ -1,19 +1,28 @@
 <template>
     <div id="app">
-        {{test}}asdf
+        <span @click="c">Open Modal</span>
+        <Modal :open.sync="openModal"></Modal>
     </div>
 </template>
 
 <script>
+    import Modal from './components/Modal'
+
     export default {
         data() {
             return {
-                test: this.$params.test || "1"
+                openModal: false
             }
         },
-        created() {
+        methods: {
+            c() {
+                this.openModal = true;
+            }
         },
-        name: 'app'
+        name: 'app',
+        components: {
+            Modal
+        }
     }
 </script>
 
@@ -25,5 +34,12 @@
         text-align: center;
         color: #2c3e50;
         margin-top: 60px;
+    }
+    span {
+        padding: 10px;
+        background: blue;
+        display: inline-block;
+        color: white;
+        cursor: pointer;
     }
 </style>
